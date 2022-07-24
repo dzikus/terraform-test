@@ -21,3 +21,7 @@ resource "aws_s3_bucket" "laboratorium-terraform-dla-mnie-dzikus" {
     "Name" = "laboratorium-terraform-dla-mnie-dzikus"
   }
 }
+resource "aws_instance" "test-z-git" {
+  ami = "ami-0a1ee2fb28fe05df3"
+  instance_type = "t2.micro"
+}
