@@ -15,12 +15,12 @@ provider "aws" {
 
 #S3 Bucket Configuration
 
-resource "aws_s3_bucket" "laboratorium-terraform-dla-mnie-dzikus" {
-  bucket = "laboratorium-terraform-dla-mnie-dzikus"
-  tags = {
-    "Name" = "laboratorium-terraform-dla-mnie-dzikus"
-  }
-}
+#resource "aws_s3_bucket" "laboratorium-terraform-dla-mnie-dzikus" {
+#  bucket = "laboratorium-terraform-dla-mnie-dzikus"
+#  tags = {
+#    "Name" = "laboratorium-terraform-dla-mnie-dzikus"
+#  }
+#}
 resource "aws_instance" "test-z-git" {
   ami = "ami-0a1ee2fb28fe05df3"
   instance_type = "t2.micro"
