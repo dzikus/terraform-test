@@ -5,7 +5,7 @@ variable "dzikus_region" {
 
 variable "vpc_name" {
   type    = string
-  default = "demo_vpc"
+  default = "dzikus terraform.cloud"
 }
 variable "vpc_cidr" {
   type    = string
@@ -24,15 +24,6 @@ variable "public_subnets" {
     "public_subnet_2" = 1
     "public_subnet_3" = 2
   }
-}
-
-
-
-
-variable "dzikus_availability_zone" {
-  type        = list(string)
-  default     = ["eu-north-1a", "eu-north-1b", "eu-north-1c"]
-  description = "AZ"
 }
 
 variable "instance_type" {
