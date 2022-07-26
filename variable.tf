@@ -12,6 +12,7 @@ variable "vpc_cidr" {
   default = "10.0.0.0/16"
 }
 variable "private_subnets" {
+  type = list
   default = {
     "private_subnet_1" = 1
     "private_subnet_2" = 2
