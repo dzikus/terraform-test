@@ -26,40 +26,40 @@ provider "aws" {
 #  instance_type = "t2.micro"
 #}
 
-data "aws_ami" "amazon" {
-  most_recent = true
+#data "aws_ami" "amazon" {
+#  most_recent = true
+#
+#  filter {
+#    name   = "name"
+#    values = ["amzn2-ami-kernel-5.10-hvm-2.0.*x86_64-gp2"]
+#  }
+#  filter {
+#    name   = "virtualization-type"
+#    values = ["hvm"]
+#  }
+#  filter {
+#    name   = "architecture"
+#    values = ["x86_64"]
+#  }
+#
+#  owners = ["137112412989"] # Amazon
+#}
 
-  filter {
-    name   = "name"
-    values = ["amzn2-ami-kernel-5.10-hvm-2.0.*x86_64-gp2"]
-  }
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
-  filter {
-    name   = "architecture"
-    values = ["x86_64"]
-  }
+#data "aws_ami" "ubuntu" {
+#  most_recent = true
+#  filter {
+#    name   = "name"
+#    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+#  }
+#  filter {
+#    name   = "virtualization-type"
+#    values = ["hvm"]
+#  }
+#  owners = ["099720109477"]
+#}
 
-  owners = ["137112412989"] # Amazon
-}
-
-data "aws_ami" "ubuntu" {
-  most_recent = true
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
-  }
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
-  owners = ["099720109477"]
-}
-
-data "aws_availability_zones" "available" {}
-data "aws_region" "current" {}
+#data "aws_availability_zones" "available" {}
+#data "aws_region" "current" {}
 
 #Define the VPC
 #resource "aws_vpc" "vpc" {
@@ -175,11 +175,11 @@ data "aws_region" "current" {}
 #  subnet_id         = each.value.id
 #}
 
-data "aws_ec2_instance_type_offering" "prefered_instance_type" {
-  filter {
-    name   = "instance-type"
-    values = ["t2.micro", "t3.micro"]
-  }
-
-  preferred_instance_types = ["t2.micro", "t3.micro"]
-}
+#data "aws_ec2_instance_type_offering" "prefered_instance_type" {
+#  filter {
+#    name   = "instance-type"
+#    values = ["t2.micro", "t3.micro"]
+#  }
+#
+#  preferred_instance_types = ["t2.micro", "t3.micro"]
+#}
