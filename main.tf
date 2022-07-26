@@ -181,5 +181,5 @@ data "aws_ec2_instance_type_offering" "prefered_instance_type" {
     values = ["t2.micro", "t3.micro"]
   }
 
-  preferred_instance_types = ["t2.micro", "t3.micro"]
+#  preferred_instance_types = ["t2.micro", "t3.micro"]
 }
