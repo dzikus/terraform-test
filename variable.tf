@@ -1,4 +1,4 @@
-variable "region" {
+variable "dzikus_region" {
   type    = string
   default = "eu-north-1"
 }
