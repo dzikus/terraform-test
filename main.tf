@@ -10,7 +10,7 @@ terraform {
 }
 #Provider Configuration
 provider "aws" {
-  region = "eu-central-1"
+  region = var.region
 }
 
 #S3 Bucket Configuration

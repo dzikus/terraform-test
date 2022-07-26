@@ -1,3 +1,7 @@
+variable "region" {
+  type = string
+  default = "eu-norh-1"
+}
 variable "vpc_name" {
   type    = string
   default = "demo_vpc"
