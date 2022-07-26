@@ -29,7 +29,7 @@ variable "public_subnets" {
 
 
 
-variable "availability_zone" {
+variable "dzikus_availability_zone" {
   type        = list(string)
   default     = ["eu-north-1a", "eu-north-1b", "eu-north-1c"]
   description = "AZ"
