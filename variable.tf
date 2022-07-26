@@ -12,7 +12,6 @@ variable "vpc_cidr" {
   default = "10.0.0.0/16"
 }
 variable "private_subnets" {
-  type = list
   default = {
     "private_subnet_1" = 0
     "private_subnet_2" = 1
@@ -20,7 +19,6 @@ variable "private_subnets" {
   }
 }
 variable "public_subnets" {
-  type = list
   default = {
     "public_subnet_1" = 0
     "public_subnet_2" = 1
