@@ -166,10 +166,20 @@ resource "aws_route_table_association" "private" {
 # Terraform Resource Block - To Build EC2 instance in Public Subnet
 resource "aws_instance" "web_server" {
   ami           = data.aws_ami.amazon.id
-  instance_type = var.instance_type
+  instance_type = data.aws_ec2_instance_type_offering.prefered_instance_type
+
   tags = {
     Name = "Amazon EC2 Server"
   }
   for_each          = aws_subnet.public_subnets
   subnet_id         = each.value.id
+}
+
+data "aws_ec2_instance_type_offering" "prefered_instance_type" {
+  filter {
+    name   = "instance-type"
+    values = ["t2.micro", "t3.micro"]
+  }
+
+  preferred_instance_types = ["t2.micro", "t3.micro"]
 }
