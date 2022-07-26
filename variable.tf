@@ -20,6 +20,7 @@ variable "private_subnets" {
   }
 }
 variable "public_subnets" {
+  type = list
   default = {
     "public_subnet_1" = 1
     "public_subnet_2" = 2
