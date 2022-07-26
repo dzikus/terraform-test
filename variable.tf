@@ -1,6 +1,6 @@
 variable "dzikus_region" {
   type    = string
-  default = "eu-north-1"
+  default = "eu-central-1"
 }
 
 variable "vpc_name" {
