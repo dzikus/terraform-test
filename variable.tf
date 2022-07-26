@@ -1,5 +1,5 @@
 variable "region" {
-  type = string
+  type    = string
   default = "eu-norh-1"
 }
 variable "vpc_name" {
