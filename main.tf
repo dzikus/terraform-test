@@ -8,7 +8,8 @@ terraform {
     }
   }
 }
-rovider "aws" {
+
+provider "aws" {
   region = var.dzikus_region
 }
 
